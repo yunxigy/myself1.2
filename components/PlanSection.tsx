@@ -7,9 +7,10 @@ import { motion } from 'framer-motion';
 interface PlanSectionProps {
   onOpenVits: () => void;
   onOpenGallery: () => void;
+  onOpenAe: () => void;
 }
 
-export const PlanSection: React.FC<PlanSectionProps> = ({ onOpenVits, onOpenGallery }) => {
+export const PlanSection: React.FC<PlanSectionProps> = ({ onOpenVits, onOpenGallery, onOpenAe }) => {
   const getStatusConfig = (status: PlanStatus) => {
     switch (status) {
       case PlanStatus.DONE:
@@ -36,14 +37,16 @@ export const PlanSection: React.FC<PlanSectionProps> = ({ onOpenVits, onOpenGall
           const config = getStatusConfig(plan.status);
           const Icon = config.icon;
           
-          // ID 4 is VITS, ID 1 is Painting
+          // ID 4 is VITS, ID 1 is Painting, ID 9 is AE
           const isVits = plan.id === '4'; 
           const isPainting = plan.id === '1';
-          const isInteractive = isVits || isPainting;
+          const isAe = plan.id === '9';
+          const isInteractive = isVits || isPainting || isAe;
           
           const handleClick = () => {
              if (isVits) onOpenVits();
              if (isPainting) onOpenGallery();
+             if (isAe) onOpenAe();
           };
           
           return (
@@ -59,9 +62,11 @@ export const PlanSection: React.FC<PlanSectionProps> = ({ onOpenVits, onOpenGall
                 isVits ? 'hover:bg-green-400/20 hover:border-green-400' : ''
               } ${
                 isPainting ? 'hover:bg-purple-400/20 hover:border-purple-400' : ''
+              } ${
+                isAe ? 'hover:bg-indigo-400/20 hover:border-indigo-400' : ''
               }`}
             >
-              <span className={`font-medium ${plan.status === PlanStatus.SHELVED ? 'text-slate-500 line-through decoration-slate-600' : 'text-slate-200'}`}>
+              <span className={`font-medium ${plan.status === PlanStatus.SHELVED ? 'text-slate-500' : 'text-slate-200'}`}>
                 {plan.text}
               </span>
               <div className="flex items-center gap-2">

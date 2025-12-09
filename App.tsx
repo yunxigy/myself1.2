@@ -33,25 +33,29 @@ export default function App() {
              <div className="w-64 h-64 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-[90px]" />
           </div>
           
-          {/* Main Title with Layered Effects - UPDATED for "Domineering" look */}
-          <div className="relative inline-block transform hover:scale-105 transition-transform duration-500">
-            {/* Main Text Layer */}
-            <h1 className="font-wild text-8xl md:text-[10rem] font-black text-transparent bg-clip-text bg-gradient-to-b from-white via-cyan-200 to-slate-400 relative z-10 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] tracking-tight -skew-x-6 -rotate-2">
+          {/* Main Title Wrapper with Transforms */}
+          {/* Moving transforms to the parent ensures all layers (shadow/text/glow) align perfectly */}
+          <div className="relative inline-block transform -skew-x-6 -rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-500 cursor-default">
+            
+            {/* 1. Hard Shadow Layer (Black) - Offset for depth */}
+            {/* Switched to font-art (Ma Shan Zheng) and increased offset to top-2/left-2 (mobile) and top-5/left-5 (desktop) */}
+            <h1 className="font-art text-7xl sm:text-8xl md:text-[11rem] font-medium text-black absolute top-2 left-2 sm:top-5 sm:left-5 select-none z-0 opacity-80 whitespace-nowrap tracking-[0.2em]">
+              逐梦光影
+            </h1>
+
+            {/* 2. Neon Glow Layer (Colored Blur) */}
+            <h1 className="font-art text-7xl sm:text-8xl md:text-[11rem] font-medium text-cyan-500 absolute top-0 left-0 select-none z-0 blur-xl opacity-50 animate-pulse-slow whitespace-nowrap tracking-[0.2em]">
               逐梦光影
             </h1>
             
-            {/* Neon Glow Layer */}
-            <h1 className="font-wild text-8xl md:text-[10rem] font-black text-cyan-500 absolute top-0 left-0 -z-10 blur-2xl opacity-60 animate-pulse-slow select-none -skew-x-6 -rotate-2 mix-blend-screen">
+            {/* 3. Main Gradient Text Layer */}
+            <h1 className="font-art text-7xl sm:text-8xl md:text-[11rem] font-medium text-transparent bg-clip-text bg-gradient-to-b from-white via-cyan-100 to-slate-400 relative z-10 drop-shadow-sm whitespace-nowrap tracking-[0.2em]">
               逐梦光影
             </h1>
             
-            {/* Hard Shadow Layer for Depth */}
-            <h1 className="font-wild text-8xl md:text-[10rem] font-black text-black absolute top-2 left-2 -z-20 opacity-80 select-none -skew-x-6 -rotate-2">
-              逐梦光影
-            </h1>
           </div>
           
-          <div className="mt-8 flex flex-col items-center">
+          <div className="mt-12 flex flex-col items-center">
              <div className="h-px w-32 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50 mb-4" />
              <p className="text-slate-400 font-serif italic tracking-[0.3em] text-sm md:text-base uppercase text-shadow-sm">
                 Chasing Dreams • Light & Shadow
@@ -96,7 +100,15 @@ export default function App() {
 
         {/* Footer */}
         <footer className="mt-20 py-8 text-center text-slate-600 text-sm border-t border-slate-900">
-          <p>&copy; {new Date().getFullYear()} 逐梦光影 | All Rights Reserved.</p>
+          <p className="mb-2">&copy; {new Date().getFullYear()} 逐梦光影 | All Rights Reserved.</p>
+          <a 
+            href="https://beian.miit.gov.cn/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-slate-400 transition-colors duration-300"
+          >
+            津ICP备2025041246号-1
+          </a>
         </footer>
       </div>
 

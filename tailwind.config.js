@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         'art': ['Ma Shan Zheng', 'cursive'],
         'wild': ['Zhi Mang Xing', 'cursive'],
+        'cang': ['Long Cang', 'cursive'],
       }
     },
   },

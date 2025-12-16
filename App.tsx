@@ -6,6 +6,7 @@ import { VitsModal } from './components/VitsModal';
 import { MediaStatsModal } from './components/MediaStatsModal';
 import { GalleryModal } from './components/GalleryModal';
 import { AeModal } from './components/AeModal';
+import { PoemOfFlowers } from './components/PoemOfFlowers';
 import { Sparkles } from 'lucide-react';
 
 export default function App() {
@@ -73,14 +74,16 @@ export default function App() {
 
           {/* Right Column: Projects (Narrower but sticky on desktop) */}
           <div className="lg:col-span-4">
-             <div className="lg:sticky lg:top-8">
+             <div className="lg:sticky lg:top-8 space-y-8">
                <ProjectList 
                  onOpenVits={() => setIsVitsOpen(true)}
                  onOpenMediaStats={() => setIsMediaStatsOpen(true)}
                />
                
+               <PoemOfFlowers />
+
                {/* Mobile/Tablet Decoration */}
-               <div className="mt-8 p-6 bg-slate-900/30 rounded-xl border border-dashed border-slate-800 hidden lg:block">
+               <div className="p-6 bg-slate-900/30 rounded-xl border border-dashed border-slate-800 hidden lg:block">
                  <p className="text-xs text-slate-500 text-center leading-loose">
                    "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself."
                    <br/>

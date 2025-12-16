@@ -33,3 +33,9 @@ export interface VitsSong {
   title: string;
   url: string;
 }
+
+export interface FlowerQuote {
+  id: string;
+  content: string;
+  source?: string;
+}

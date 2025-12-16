@@ -6,6 +6,7 @@ import { VitsModal } from './components/VitsModal';
 import { MediaStatsModal } from './components/MediaStatsModal';
 import { GalleryModal } from './components/GalleryModal';
 import { AeModal } from './components/AeModal';
+import { GachaModal } from './components/GachaModal';
 import { PoemOfFlowers } from './components/PoemOfFlowers';
 import { Sparkles } from 'lucide-react';
 
@@ -14,6 +15,7 @@ export default function App() {
   const [isMediaStatsOpen, setIsMediaStatsOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isAeOpen, setIsAeOpen] = useState(false);
+  const [isGachaOpen, setIsGachaOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200 relative overflow-x-hidden selection:bg-blue-500/30">
@@ -78,6 +80,7 @@ export default function App() {
                <ProjectList 
                  onOpenVits={() => setIsVitsOpen(true)}
                  onOpenMediaStats={() => setIsMediaStatsOpen(true)}
+                 onOpenGacha={() => setIsGachaOpen(true)}
                />
                
                <PoemOfFlowers />
@@ -120,6 +123,7 @@ export default function App() {
       {isMediaStatsOpen && <MediaStatsModal isOpen={isMediaStatsOpen} onClose={() => setIsMediaStatsOpen(false)} />}
       {isGalleryOpen && <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />}
       {isAeOpen && <AeModal isOpen={isAeOpen} onClose={() => setIsAeOpen(false)} />}
+      {isGachaOpen && <GachaModal isOpen={isGachaOpen} onClose={() => setIsGachaOpen(false)} />}
     </div>
   );
 }

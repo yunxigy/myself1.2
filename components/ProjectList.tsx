@@ -6,14 +6,17 @@ import { motion } from 'framer-motion';
 interface ProjectListProps {
   onOpenVits: () => void;
   onOpenMediaStats: () => void;
+  onOpenGacha?: () => void; // New optional prop
 }
 
-export const ProjectList: React.FC<ProjectListProps> = ({ onOpenVits, onOpenMediaStats }) => {
+export const ProjectList: React.FC<ProjectListProps> = ({ onOpenVits, onOpenMediaStats, onOpenGacha }) => {
   const handleProjectClick = (id: string) => {
     if (id === 'p2') { // VITS ID
       onOpenVits();
     } else if (id === 'p3') { // Media Creator ID
       onOpenMediaStats();
+    } else if (id === 'p6') { // 2D Card Project ID
+      if (onOpenGacha) onOpenGacha();
     }
   };
 
@@ -26,7 +29,8 @@ export const ProjectList: React.FC<ProjectListProps> = ({ onOpenVits, onOpenMedi
       <div className="grid grid-cols-1 gap-4">
         {PROJECTS_DATA.map((project, index) => {
           const IconComponent = (Icons as any)[project.icon] || Icons.Folder;
-          const isInteractive = project.id === 'p2' || project.id === 'p3';
+          // Updated interactive list to include 'p6'
+          const isInteractive = project.id === 'p2' || project.id === 'p3' || project.id === 'p6';
           
           return (
             <motion.div

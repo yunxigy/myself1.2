@@ -17,7 +17,7 @@ interface Card {
   image: string;
 }
 
-// Mock Card Pool with Star Alliance lore and Unsplash images
+// Mock Card Pool with Star Alliance lore
 const CARD_POOL: Card[] = [
   // UR (1%)
   { 
@@ -32,7 +32,7 @@ const CARD_POOL: Card[] = [
     name: '零号·起源智脑', 
     rarity: 'UR', 
     description: '赋星阁的核心意识，全知全能',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop'
+    image: 'https://s41.ax1x.com/2025/12/18/pZlf8d1.jpg'
   },
   // SSR (4%)
   { 
@@ -58,54 +58,112 @@ const CARD_POOL: Card[] = [
   },
   { 
     id: 'ssr4', 
-    name: '虚拟歌姬·幻', 
+    name: '全民偶像：澪', 
     rarity: 'SSR', 
     description: '陨星阁首席偶像，全网亿粉',
-    image: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2071&auto=format&fit=crop'
+    image: 'https://s41.ax1x.com/2025/12/17/pZlWJgg.jpg'
   },
-  // SR (15%)
+  // SR (15%) - Updated per user request
   { 
     id: 'sr1', 
-    name: '量产型机甲 MK-II', 
+    name: '幻星阁：舰装', 
     rarity: 'SR', 
-    description: '幻星阁主战装备',
-    image: 'https://images.unsplash.com/photo-1612438214708-f428a707dd4e?q=80&w=1974&auto=format&fit=crop'
+    description: '次世代机能强化组件',
+    image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1974&auto=format&fit=crop'
   },
   { 
     id: 'sr2', 
-    name: '重型盾构机', 
+    name: '神星阁：量产型机甲 SXJ-II', 
     rarity: 'SR', 
-    description: '神星阁工程奇迹',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop'
+    description: '重工之魂，钢铁之躯',
+    image: 'https://images.unsplash.com/photo-1558239027-22d7f80da3ec?q=80&w=2070&auto=format&fit=crop'
   },
   { 
     id: 'sr3', 
-    name: '聚变反应堆', 
+    name: '陨星阁：全民偶像：澪', 
     rarity: 'SR', 
-    description: '梦星阁能源之心',
-    image: 'https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=2070&auto=format&fit=crop'
+    description: '练习生时期的闪耀瞬间',
+    image: 'https://s41.ax1x.com/2025/12/17/pZlWJgg.jpg'
   },
   { 
     id: 'sr4', 
-    name: '精英突击队', 
+    name: '观星阁：黑卡', 
     rarity: 'SR', 
-    description: '语星阁特培战力',
-    image: 'https://images.unsplash.com/photo-1595590424283-b8f17842773f?q=80&w=2070&auto=format&fit=crop'
+    description: '无限信用度，资本的力量',
+    image: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=2070&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr5', 
+    name: '语星阁：星盟宣言', 
+    rarity: 'SR', 
+    description: '智慧火种，文明之基',
+    image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1974&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr6', 
+    name: '逐星阁：穿梭机', 
+    rarity: 'SR', 
+    description: '超越平流层的极速掠影',
+    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr7', 
+    name: '梦星阁：核聚变反应炉', 
+    rarity: 'SR', 
+    description: '永恒的黎明，微缩的太阳',
+    image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=2066&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr8', 
+    name: '灵星阁：灵力进化体', 
+    rarity: 'SR', 
+    description: '改写生命密码的阶段成果',
+    image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1974&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr9', 
+    name: '幽星阁：海上堡垒', 
+    rarity: 'SR', 
+    description: '永不沉没的蓝水基石',
+    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr10', 
+    name: '赋星阁：显卡FX-800', 
+    rarity: 'SR', 
+    description: '算力巅峰，数字世界的基石',
+    image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=2070&auto=format&fit=crop'
   },
   // R (80%) - Generic items
-  // TODO: Replace this URL with your uploaded image link!
-  // I have set it to a futuristic blue energy visual for now.
   { 
     id: 'r1', 
     name: '能量电池', 
     rarity: 'R', 
     description: '高能压缩储能单元', 
-    image: 'https://images.unsplash.com/photo-1616423664033-68e14b22c8cb?q=80&w=2070&auto=format&fit=crop' 
+    image: 'https://s41.ax1x.com/2025/12/16/pZQOPcq.png' 
   },
-  { id: 'r2', name: '维修扳手', rarity: 'R', description: '基础工具', image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a782?q=80&w=2070&auto=format&fit=crop' },
+  { 
+    id: 'r2', 
+    name: '维修扳手', 
+    rarity: 'R', 
+    description: '基础工具', 
+    image: 'https://s41.ax1x.com/2025/12/17/pZlWUDs.png' 
+  },
   { id: 'r3', name: '数据芯片', rarity: 'R', description: '存储介质', image: 'https://images.unsplash.com/photo-1555617778-02518510b9fa?q=80&w=2070&auto=format&fit=crop' },
-  { id: 'r4', name: '压缩干粮', rarity: 'R', description: '生存物资', image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=1974&auto=format&fit=crop' },
-  { id: 'r5', name: '合金碎片', rarity: 'R', description: '回收材料', image: 'https://images.unsplash.com/photo-1518709414768-a88981a45e5d?q=80&w=1962&auto=format&fit=crop' },
+  { 
+    id: 'r4', 
+    name: '压缩干粮', 
+    rarity: 'R', 
+    description: '生存物资', 
+    image: 'https://s41.ax1x.com/2025/12/16/pZQOij0.jpg' 
+  },
+  { 
+    id: 'r5', 
+    name: '合金碎片', 
+    rarity: 'R', 
+    description: '回收材料', 
+    image: 'https://s41.ax1x.com/2025/12/17/pZlWYvQ.jpg' 
+  },
 ];
 
 export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
@@ -167,7 +225,7 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
       setHistory(prev => [...newCards, ...prev]);
       setShowResult(true);
       setIsPulling(false);
-    }, 2000); // Slightly longer for anticipation
+    }, 2000); // Animation duration
   };
 
   if (!isOpen) return null;
@@ -298,23 +356,20 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                 </div>
             )}
 
-            {/* Pulling Animation - Enhanced */}
+            {/* Pulling Animation */}
             {isPulling && (
                 <div className="relative z-10 flex flex-col items-center justify-center">
                     <div className="relative">
-                        {/* Outer Glow Ring */}
                         <motion.div 
                             animate={{ rotate: 360, scale: [1, 1.3, 1] }}
                             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                             className="w-48 h-48 rounded-full bg-gradient-to-tr from-indigo-500/40 via-purple-500/40 to-pink-500/40 blur-2xl opacity-50 absolute inset-[-2rem]"
                         />
-                        {/* Spinning Dashed Border */}
                         <motion.div 
                             animate={{ rotate: -360 }}
                             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                             className="absolute inset-0 w-32 h-32 border-2 border-dashed border-indigo-300/50 rounded-full"
                         />
-                        {/* Inner Core */}
                         <motion.div
                              animate={{ scale: [1, 1.5, 0.5, 10], opacity: [1, 1, 1, 0] }}
                              transition={{ duration: 2, times: [0, 0.5, 0.8, 1], repeat: Infinity }}
@@ -332,7 +387,7 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                 </div>
             )}
 
-            {/* Results Grid - REVERTED TO BOUNCY POP-UP ANIMATION */}
+            {/* Results Grid */}
             {showResult && !isPulling && (
                 <div className="relative z-10 w-full h-full overflow-y-auto p-4 md:p-8 scrollbar-thin scrollbar-thumb-indigo-500/20">
                     <button 
@@ -345,27 +400,26 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                         {currentPull.map((card, index) => (
                             <motion.div
                                 key={card.id}
-                                // Reverted to "Pop up" animation: Scale 0.8->1.05->1.0, Slide Up
                                 initial={{ opacity: 0, scale: 0.5, y: 50 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 transition={{ 
-                                  delay: index * 0.1, // Faster stagger
+                                  delay: index * 0.1,
                                   type: 'spring', 
                                   stiffness: 300,
                                   damping: 20
                                 }}
                                 className={`group relative aspect-[3/4] rounded-xl overflow-hidden border-2 bg-slate-900 ${getRarityColor(card.rarity)} transition-all duration-300 hover:scale-[1.05] hover:-translate-y-2 hover:z-20 cursor-pointer shadow-xl hover:shadow-2xl`}
                             >
-                                {/* Background Image */}
                                 <div className="absolute inset-0">
                                     <img 
                                       src={card.image} 
                                       alt={card.name}
                                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                      onError={(e) => {
+                                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop';
+                                      }}
                                     />
-                                    {/* Gradient Overlays */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent" />
-                                    {/* Rarity Flash Overlay */}
                                     <motion.div 
                                       initial={{ opacity: 0.8 }}
                                       animate={{ opacity: 0 }}
@@ -375,7 +429,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity bg-gradient-to-b ${card.rarity === 'UR' ? 'from-yellow-500' : 'from-transparent'}`} />
                                 </div>
 
-                                {/* Content */}
                                 <div className="absolute inset-0 p-3 flex flex-col justify-between z-10">
                                     <div className="flex justify-between items-start">
                                         <span className={`px-2 py-0.5 text-xs font-bold rounded shadow-lg ${getRarityBadge(card.rarity)}`}>
@@ -394,7 +447,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                                     </div>
                                 </div>
                                 
-                                {/* Shine Effect for UR/SSR */}
                                 {(card.rarity === 'UR' || card.rarity === 'SSR') && (
                                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent translate-x-[-150%] animate-[shine_2s_infinite] pointer-events-none" />
                                 )}

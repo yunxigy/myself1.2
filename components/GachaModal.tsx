@@ -17,16 +17,9 @@ interface Card {
   image: string;
 }
 
-// Mock Card Pool with Star Alliance lore
+// Updated Card Pool based on user feedback
 const CARD_POOL: Card[] = [
-  // UR (1%)
-  { 
-    id: 'ur1', 
-    name: '星盟·最终决战兵器', 
-    rarity: 'UR', 
-    description: '神星阁最高机密，轨道歼星炮',
-    image: 'https://images.unsplash.com/photo-1535581652167-3d6693c03a67?q=80&w=2069&auto=format&fit=crop'
-  },
+  // UR (1%) - Peak Power
   { 
     id: 'ur2', 
     name: '零号·起源智脑', 
@@ -34,107 +27,107 @@ const CARD_POOL: Card[] = [
     description: '赋星阁的核心意识，全知全能',
     image: 'https://s41.ax1x.com/2025/12/18/pZlf8d1.jpg'
   },
-  // SSR (4%)
+  // SSR (4%) - High-tier Assets
   { 
     id: 'ssr1', 
-    name: '深海巨兽·利维坦', 
+    name: '舰装', 
     rarity: 'SSR', 
-    description: '幽星阁深潜母舰，吞噬海浪',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop'
-  },
-  { 
-    id: 'ssr2', 
-    name: '平流层·光棱塔', 
-    rarity: 'SSR', 
-    description: '逐星阁防御矩阵，天基打击',
-    image: 'https://images.unsplash.com/photo-1548502669-0f2c416709ee?q=80&w=1946&auto=format&fit=crop'
-  },
-  { 
-    id: 'ssr3', 
-    name: '基因飞升者', 
-    rarity: 'SSR', 
-    description: '灵星阁完美进化体，超越凡胎',
-    image: 'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=2010&auto=format&fit=crop'
-  },
-  { 
-    id: 'ssr4', 
-    name: '全民偶像：澪', 
-    rarity: 'SSR', 
-    description: '陨星阁首席偶像，全网亿粉',
-    image: 'https://s41.ax1x.com/2025/12/17/pZlWJgg.jpg'
-  },
-  // SR (15%) - Updated per user request
-  { 
-    id: 'sr1', 
-    name: '幻星阁：舰装', 
-    rarity: 'SR', 
     description: '次世代机能强化组件',
     image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1974&auto=format&fit=crop'
   },
   { 
-    id: 'sr2', 
-    name: '神星阁：量产型机甲 SXJ-II', 
-    rarity: 'SR', 
+    id: 'ssr2', 
+    name: '量产型机甲 SXJ-II', 
+    rarity: 'SSR', 
     description: '重工之魂，钢铁之躯',
     image: 'https://images.unsplash.com/photo-1558239027-22d7f80da3ec?q=80&w=2070&auto=format&fit=crop'
   },
   { 
-    id: 'sr3', 
-    name: '陨星阁：全民偶像：澪', 
-    rarity: 'SR', 
-    description: '练习生时期的闪耀瞬间',
+    id: 'ssr3', 
+    name: '全民偶像：澪', 
+    rarity: 'SSR', 
+    description: '全网亿粉的闪耀瞬间',
     image: 'https://s41.ax1x.com/2025/12/17/pZlWJgg.jpg'
   },
   { 
-    id: 'sr4', 
-    name: '观星阁：黑卡', 
-    rarity: 'SR', 
+    id: 'ssr4', 
+    name: '星盟黑卡', 
+    rarity: 'SSR', 
     description: '无限信用度，资本的力量',
     image: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=2070&auto=format&fit=crop'
   },
   { 
-    id: 'sr5', 
-    name: '语星阁：星盟宣言', 
-    rarity: 'SR', 
+    id: 'ssr5', 
+    name: '星盟宣言', 
+    rarity: 'SSR', 
     description: '智慧火种，文明之基',
     image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1974&auto=format&fit=crop'
   },
   { 
-    id: 'sr6', 
-    name: '逐星阁：穿梭机', 
-    rarity: 'SR', 
+    id: 'ssr6', 
+    name: '高超音速穿梭机', 
+    rarity: 'SSR', 
     description: '超越平流层的极速掠影',
     image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop'
   },
   { 
-    id: 'sr7', 
-    name: '梦星阁：核聚变反应炉', 
-    rarity: 'SR', 
+    id: 'ssr7', 
+    name: '核聚变反应炉', 
+    rarity: 'SSR', 
     description: '永恒的黎明，微缩的太阳',
     image: 'https://images.unsplash.com/photo-1517420879524-86d64ac2f339?q=80&w=2066&auto=format&fit=crop'
   },
   { 
-    id: 'sr8', 
-    name: '灵星阁：灵力进化体', 
-    rarity: 'SR', 
+    id: 'ssr8', 
+    name: '灵力进化体', 
+    rarity: 'SSR', 
     description: '改写生命密码的阶段成果',
     image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1974&auto=format&fit=crop'
   },
   { 
-    id: 'sr9', 
-    name: '幽星阁：海上堡垒', 
-    rarity: 'SR', 
+    id: 'ssr9', 
+    name: '移动海上堡垒', 
+    rarity: 'SSR', 
     description: '永不沉没的蓝水基石',
     image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop'
   },
   { 
-    id: 'sr10', 
-    name: '赋星阁：显卡FX-800', 
-    rarity: 'SR', 
+    id: 'ssr10', 
+    name: '显卡 FX-800', 
+    rarity: 'SSR', 
     description: '算力巅峰，数字世界的基石',
     image: 'https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=2070&auto=format&fit=crop'
   },
-  // R (80%) - Generic items
+  // SR (15%) - Standard Gear
+  { 
+    id: 'sr1', 
+    name: '脉冲步枪', 
+    rarity: 'SR', 
+    description: '高频能量输出装置',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr2', 
+    name: '外骨骼组件', 
+    rarity: 'SR', 
+    description: '提升单兵负荷与机动性',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr3', 
+    name: '加密存储盘', 
+    rarity: 'SR', 
+    description: '存储关键的战术情报',
+    image: 'https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=2070&auto=format&fit=crop'
+  },
+  { 
+    id: 'sr4', 
+    name: '侦察无人机', 
+    rarity: 'SR', 
+    description: '战场全域视野覆盖',
+    image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1974&auto=format&fit=crop'
+  },
+  // R (80%) - Consumables
   { 
     id: 'r1', 
     name: '能量电池', 
@@ -146,23 +139,29 @@ const CARD_POOL: Card[] = [
     id: 'r2', 
     name: '维修扳手', 
     rarity: 'R', 
-    description: '基础工具', 
+    description: '基础工业工具', 
     image: 'https://s41.ax1x.com/2025/12/17/pZlWUDs.png' 
   },
-  { id: 'r3', name: '数据芯片', rarity: 'R', description: '存储介质', image: 'https://images.unsplash.com/photo-1555617778-02518510b9fa?q=80&w=2070&auto=format&fit=crop' },
+  { 
+    id: 'r3', 
+    name: '数据碎片', 
+    rarity: 'R', 
+    description: '零散的底层二进制代码', 
+    image: 'https://images.unsplash.com/photo-1555617778-02518510b9fa?q=80&w=2070&auto=format&fit=crop' 
+  },
   { 
     id: 'r4', 
-    name: '压缩干粮', 
+    name: '应急补给包', 
     rarity: 'R', 
-    description: '生存物资', 
+    description: '维持基本生命体征', 
     image: 'https://s41.ax1x.com/2025/12/16/pZQOij0.jpg' 
   },
   { 
     id: 'r5', 
     name: '合金碎片', 
     rarity: 'R', 
-    description: '回收材料', 
-    image: 'https://s41.ax1x.com/2025/12/17/pZlWYvQ.jpg' 
+    description: '通用的基础金属材料', 
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop' 
   },
 ];
 
@@ -173,7 +172,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
   const [showResult, setShowResult] = useState(false);
   const [showPool, setShowPool] = useState(false);
 
-  // Rarity Config
   const getRarityColor = (rarity: Rarity) => {
     switch (rarity) {
       case 'UR': return 'border-yellow-400 shadow-[0_0_25px_rgba(251,191,36,0.8)] ring-2 ring-yellow-500/50';
@@ -225,7 +223,7 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
       setHistory(prev => [...newCards, ...prev]);
       setShowResult(true);
       setIsPulling(false);
-    }, 2000); // Animation duration
+    }, 2000);
   };
 
   if (!isOpen) return null;
@@ -270,9 +268,7 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Main Stage */}
-          <div className="flex-1 overflow-hidden relative flex flex-col items-center justify-center bg-slate-950 perspective-1000">
-            
-            {/* Background Grid */}
+          <div className="flex-1 overflow-hidden relative flex flex-col items-center justify-center bg-slate-950">
             <div className="absolute inset-0 bg-[linear-gradient(rgba(30,41,59,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(30,41,59,0.2)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] z-0" />
 
             {/* Standby State */}
@@ -302,7 +298,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                         </div>
                     </motion.div>
                     
-                    {/* Featured Cards Preview */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 opacity-60 pointer-events-none select-none">
                        {CARD_POOL.slice(0, 4).map(card => (
                           <div key={card.id} className="relative aspect-[3/4] rounded-lg overflow-hidden border border-slate-700">
@@ -420,12 +415,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                                       }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent" />
-                                    <motion.div 
-                                      initial={{ opacity: 0.8 }}
-                                      animate={{ opacity: 0 }}
-                                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                                      className="absolute inset-0 bg-white pointer-events-none"
-                                    />
                                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity bg-gradient-to-b ${card.rarity === 'UR' ? 'from-yellow-500' : 'from-transparent'}`} />
                                 </div>
 
@@ -481,7 +470,6 @@ export const GachaModal: React.FC<GachaModalProps> = ({ isOpen, onClose }) => {
                 <span className="relative text-[10px] text-indigo-200 mt-1 uppercase">1600 Credits</span>
              </button>
           </div>
-
         </motion.div>
       </div>
     </AnimatePresence>

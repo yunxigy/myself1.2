@@ -104,7 +104,7 @@ const CARD_POOL: Card[] = [
     name: '脉冲步枪', 
     rarity: 'SR', 
     description: '高频能量输出装置',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://s41.ax1x.com/2025/12/26/pZJRHJI.png'
   },
   { 
     id: 'sr2', 
@@ -118,14 +118,14 @@ const CARD_POOL: Card[] = [
     name: '加密存储盘', 
     rarity: 'SR', 
     description: '存储关键的战术情报',
-    image: 'https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://s41.ax1x.com/2025/12/26/pZJRLSP.png'
   },
   { 
     id: 'sr4', 
     name: '侦察无人机', 
     rarity: 'SR', 
     description: '战场全域视野覆盖',
-    image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1974&auto=format&fit=crop'
+    image: 'https://s41.ax1x.com/2025/12/26/pZJWY0e.png'
   },
   // R (80%) - Consumables
   { 
@@ -161,7 +161,7 @@ const CARD_POOL: Card[] = [
     name: '合金碎片', 
     rarity: 'R', 
     description: '通用的基础金属材料', 
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1974&auto=format&fit=crop' 
+    image: 'https://s41.ax1x.com/2025/12/17/pZlWYvQ.jpg' 
   },
 ];
 
